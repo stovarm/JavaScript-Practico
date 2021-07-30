@@ -70,3 +70,23 @@ function areaCirculo(radio) {
 };
 console.groupEnd;
 
+// Aquí interactuamos con el HTML
+
+
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("InputCuadrado"); //Obtener el dato del html que ponga el usuario.
+    const value = input.value;  //Obtener el valor del "dato" que puso el usuario.
+
+    const perimetro = perimetroCuadrado(value); //Creamos una constante que va a tomar el valor de ejecuar la funcion con el Value que dió el usuario   
+    alert(perimetro);  //Me muestra en alerta el resultado de Perimetro.
+
+
+};
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("InputCuadrado"); 
+    const value = input.value;  
+
+    const area = areaCuadrado(value); 
+    alert(area);
+};
