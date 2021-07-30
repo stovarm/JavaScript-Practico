@@ -114,3 +114,22 @@ function calcularAreaTriangulo() {
     const area = areaTriangulo(value1, calcularAlturaTriangulo());
     alert(area);
 };
+
+// Círculo
+
+function calcularPerimetroCirculo() {
+    const input = document.getElementById("InputCirculo");
+    const value = input.value;
+    
+
+    const perimetro = perimetroCirculo(value);
+    alert(perimetro);
+};
+
+function calcularAreaCirculo() {
+    const input = document.getElementById("InputCirculo");
+    const value = input.value;
+
+    const area = areaCirculo(value);
+    alert(area);
+};
