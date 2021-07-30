@@ -13,8 +13,8 @@
     </header>
 
     <section>
-        <h2>Calcula la área y perímetro de un cuadrado</h2>
-        <form action="">
+        <h2>Calcula el área y perímetro de un cuadrado</h2>
+        <form>
             <label for="InputCuadrado">  <!-- conectamos el lable con el id del input, si tocan el label los lleva al input -->
                 Escribe cuánto mide cada lado de tu cuadrado:
             </label>
@@ -23,6 +23,24 @@
                 Calcular el perímetro
             </button>
             <button type="button" onclick="calcularAreaCuadrado()">  <!-- onclick es para ligarlo a Js a esa función y que al activar el boton js reaccióne. -->
+                Calcular el área
+            </button>
+        </form>
+
+        <h2>Calcula el área y perímetro de un triángulo</h2>
+        <form>
+            <label for="InputTrianguloBase">
+                Escribe cuánto mide la base del triángulo:
+            </label>
+            <input id="InputTrianguloBase" type="number">
+            <label for="InputTrianguloLado">
+                Escribe cuánto mide un lado del triángulo:
+            </label>
+            <input id="InputTrianguloLado" type="number">
+            <button type="button" onclick="calcularPerimetroTriangulo()">  
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaTriangulo()">
                 Calcular el área
             </button>
         </form>
