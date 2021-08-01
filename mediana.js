@@ -10,6 +10,10 @@ function calcularMediaAritmetica(lista) {
 };
 
 function calcularMediana (listaMediana) {
+    listaMediana.sort(function(a,b) {       // Con .sort ordenamos de manera ascendente con la función comparar.
+    return a - b;
+    });
+
     const mitadLista = parseInt(listaMediana.length/2);
     let mediana;
 
@@ -34,5 +38,5 @@ function calcularMediana (listaMediana) {
         mediana = listaMediana[mitadLista];
     }
 
-    return  mediana;
+    return  "Mediana: " + mediana + " Lista ordenada: " + listaMediana;
 }
