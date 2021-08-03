@@ -52,16 +52,32 @@ function calculateExpenses () {
     const otherP = document.getElementById("Others");
     otherP.innerText = "$" + other;
     
-
-
-
+    // Inversión
     
+    const yearSavings = income * 12 * 0.1;
+
+    const inputYears = document.getElementById("InputYears");
+    const yearsValue = inputYears.value;
+    const months = yearsValue * 12;
+    const inputRate = document.getElementById("InputRate");
+    const rate = inputRate.value;
+
+    const interest = 1 + rate/100;
+    const number = Math.pow(interest, months);
+    const invest = yearSavings * number;
+    
+    const savingsP = document.getElementById("YearSavings");
+    savingsP.innerText = "$" + yearSavings;
+
+    const capitalP = document.getElementById("Capital");
+    capitalP.innerText = "$" + invest; 
+
 }
 
 // Inversión
 
 
-function calculateInvestment () {
+/* function calculateInvestment () {
     
     const yearSavings = income * 12 * 0.1;
 
@@ -80,7 +96,7 @@ function calculateInvestment () {
 
     const capitalP = document.getElementById("Capital");
     capitalP.innerText = "$" + invest;    
-}
+} */
 
 
 

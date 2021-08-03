@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Big Shoulders Text', cursive;
+}
+
+header {
+    display: flex;
+    background-color: #00CDFF;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#00CDFF, #0A6EC7);
+    height: 80vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    justify-content: space-evenly;
+    border: 2px solid black;
+    border-radius: 5rem;
+    height: 60vh;
+    width: 60vw;
+}
+
+.form_inputs {    
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+form input {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.15rem solid black;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    outline: none;    
+}
+
+form button {
+    border-radius: 0.8rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    width: 7.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    align-self: center;
+}
+
+
+.form_results {
+    
+    display: grid;
+    grid-template-columns: repeat(2, 7.5rem);
+}
+
+
+label, p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+p, input {
+    color: white;
+}
+
+p {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: ;
+}
+
+
+
+
+footer {
+    background-color: #0A6EC7;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.github {
+    width: 2rem;
+}
+
+.ig {
+    width: 2rem;
+}
+
+/* h3 {
+    width: 100%;
+} */
