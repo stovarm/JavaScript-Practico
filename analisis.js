@@ -70,5 +70,5 @@ console.log({
     medianaGeneralCol,
     medianaTop10Col,
     salariosCol,
-    colombia
+    colombia,
 });
