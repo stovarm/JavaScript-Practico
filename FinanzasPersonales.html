@@ -4,11 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finanzas Personales</title>
+    <title>PersonalFinance</title>
     <link rel="stylesheet" href="./FinanzasPersonales.css">
 </head>
 <body>
-    <h1>Finanzas Personales</h1>
+    <header>
+        <h1>Personal Finance</h1>
+    </header>
+    
+    <section>
+        <h2>Calculate your Budget</h2>
+        <form>
+            <label for="InputIncome">Income:</label>
+            <input id="InputIncome" placeholder="Example: 10000" type="number">
+            <button type="button" onclick="calculateExpenses()">
+                Calculate your Budget
+            </button>
+            <label>Expenses:</label>
+            <p id="Expenses"></p>
+            <label>Rent 30%:</label>
+            <p id="Rent"></p>
+            <label>Food 15%:</label>
+            <p id="Food"></p>
+            <label>Debt 15%:</label>
+            <p id="Debt"></p>
+            <label>Transport 10%:</label>
+            <p id="Transport"></p>
+            <label>Services 10%:</label>
+            <p id="Services"></p>
+            <label>Others 10%:</label>
+            <p id="Others"></p>         
+        </form> 
+    </section>
+
+    <section>
+        <h2>Project your investments</h2>        
+        <form action="">
+            <label for="InputRate">Interest Rate (monthly):</label>
+            <input id="InputRate" placeholder="Example: 2.2" type="number">
+            <label for="InputYears">Years to Project:</label>
+            <input id="InputYears" placeholder="Example: 5" type="number">
+            <button type="button" onclick="calculateInvestment()">
+                Calculate your Investment
+            </button>
+            <label for="">1 Year Savings (10% of Income):</label>
+            <p id="YearSavings"></p>
+            <label for="">Final Capital:</label>
+            <p id="Capital"></p>
+        </form>
+        
+        
+        
+    </section>
 
 
     <script src="./FinanzasPersonales.js"></script>

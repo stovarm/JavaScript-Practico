@@ -1,44 +1,94 @@
-const income = 10000;
 
-const rent = income * 0.3;
-const food = income * 0.15;
-const debt = income * 0.15;
-const transport = income * 0.1;
-const services = income * 0.1;
-const other = income * 0.1;
-const saving = income * 0.1;
+/* const saving = income * 0.1; */
 
-const expenses = [
-    rent,
-    food,
-    debt,
-    transport,
-    services,
-    other,
-];
+
+
 // Total Gastos
-const sumExpenses = expenses.reduce(
-    function (a = 0, b){
-        return a + b;
-    }
-);
 
-// Inversión a 1 Año.
-const yearSavings = saving * 12;
+function calculateExpenses () {
+    
+    const inputIncome = document.getElementById("InputIncome");
+    const income = inputIncome.value;
+    const rent = income * 0.3;
+    const food = income * 0.15;
+    const debt = income * 0.15;
+    const transport = income * 0.1;
+    const services = income * 0.1;
+    const other = income * 0.1;
+    
+    const expenses = [
+        rent,
+        food,
+        debt,
+        transport,
+        services,
+        other,
+    ];
 
-function investments (capital, rate, months) {
+    const sumExpenses = expenses.reduce(
+        function (a = 0, b){
+            return a + b;
+        }
+    );
+
+    const expensesP = document.getElementById("Expenses");
+    expensesP.innerText = "$" + sumExpenses;
+
+    const rentP = document.getElementById("Rent");
+    rentP.innerText = "$" + rent;
+
+    const foodP = document.getElementById("Food");
+    foodP.innerText = "$" + food;
+
+    const debtP = document.getElementById("Debt");
+    debtP.innerText = "$" + debt;
+
+    const transpP = document.getElementById("Transport");
+    transpP.innerText = "$" + transport;
+
+    const serviceP = document.getElementById("Services");
+    serviceP.innerText = "$" + services;
+
+    const otherP = document.getElementById("Others");
+    otherP.innerText = "$" + other;
+    
+
+
+
+    
+}
+
+// Inversión
+
+
+function calculateInvestment () {
+    
+    const yearSavings = income * 12 * 0.1;
+
+    const inputYears = document.getElementById("InputYears");
+    const yearsValue = inputYears.value;
+    const months = yearsValue / 12;
+    const inputRate = document.getElementById("InputRate");
+    const rate = inputRate.value;
+
     const interest = 1 + rate/100;
     const number = Math.pow(interest, months);
-    const invest = capital * number;
-    return invest;
+    const invest = yearSavings * number;
+    
+    const savingsP = document.getElementById("YearSavings");
+    savingsP.innerText = "$" + yearSavings;
+
+    const capitalP = document.getElementById("Capital");
+    capitalP.innerText = "$" + invest;    
 }
 
 
 
-console.log(rent, food, debt, transport, services, other, saving);
-console.log(expenses);
-console.log("Total Gastos: $" + sumExpenses);
-console.log("Total Ahorrado en 1 año: $" + yearSavings);
-console.log("Con 1 año de inversión tendra: $" + investments(yearSavings, 2, 12));
+
+/* console.log(rent, food, debt, transport, services, other, saving); */
+/* console.log(expenses); */
+/* console.log("Total Gastos: $" + calculateExpenses(income)); */
+/* console.log("Total Ahorrado en 1 año: $" + yearSavings);
+console.log("Final Capital: $" + calculateInvestment(yearSavings, 2, 12)); */
 
 // 30EA -> 2.21 EM   
